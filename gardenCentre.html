@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed:300,400,400i,700&display=swap" rel="stylesheet">   
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/d9461c25c6.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Verbeek's Farm and Garden Centre</title>
+</head>
+
+<!-- Mobile modal nav -->
+<nav class="mobile-nav-modal">
+  <aside class="modal-exit">
+    <a href="#"><i class="fas fa-times-circle"></i></a>
+  </aside>
+  <ul class="modal-ul">
+    <li><a href="landscaping.html">Landscaping</a></li>
+    <li><a href="gardenCentre.html">Garden Centre</a></li>
+    <li><a href="store.html">Store</a></li>
+  </ul>
+  <img src="styles/assets/logo.png" alt="Verbeek's Farm and Garden Centre"> 
+</nav>
+<!-- End of mobile nav -->
+<!-- Contact modal -->
+<div class="contact-modal">
+  <form action="#" method="POST">
+    <aside class="modal-exit">
+      <a href="#"><i class="fas fa-times-circle"></i></a>
+    </aside>
+    <label class="visuallyhidden" for="name">Name</label>
+    <input type="text" id="name" placeholder="Name" required>
+    <label class="visuallyhidden" for="email">Email</label>
+    <input type="email" id="email" placeholder="Email" required>
+    <label class="visuallyhidden" for="number">Phone Number</label>
+    <input type="input" id="number" placeholder="Phone number" required>
+    <label class="visuallyhidden" for="subject">Subject</label>
+    <input type="subject" placeholder="Subject" required>
+    <label class="visuallyhidden" for="message">How can we help you?</label>
+    <textarea name="message" id="message" cols="20" rows="4" placeholder="How can we help you?" required></textarea>
+    <button type="submit">We will be in touch!</button>
+  </form>
+</div>
+<!-- End of contact modal -->
+
+<body>
+  <header>
+    <!-- Primary navigation  -->
+    <nav>
+      <ul class="primary-nav">
+        <li><a href="index.html"><img src="styles/assets/logo.png" alt="Verbeek's Farm and Garden Centre"></a></li>
+        <li><a href="#"><i class="fas fa-align-right"></i></a></li>
+        <ul class="desktop-ul">
+          <li><a href="landscaping.html">Landscaping</a></li>
+          <li><a href="gardenCentre.html">Garden Centre</a></li>
+          <li><a href="store.html">Store</a></li>
+        </ul>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Section 1 -->
+    <div class="wrapper">
+      <section class="section-1-gardenCentre">
+        <h3>Garden Centre</h3>
+      </section>
+    </div>
+    <!-- End of section 1 -->
+  </main>
+  <footer>
+    <div class="wrapper">
+      <div class="footer-container">
+        <aside class="map-container">
+          <div id="map"></div>
+        </aside class="map-container">
+        <div class="hours-container">
+          <h4>Hours</h4>
+          <p>Monday to Saturday: 8am - 5:30pm</p>
+          <p>Sunday: <span>Closed</span></p>
+          <p>Can't make it in? We would love to chat!</p>
+          <p>519-482-9333</p>
+          <p>or</p>
+          <div class="message-us-container">
+            <a href="#" class="modal-contact-button">Message Us</a>
+          </div>
+        </div>
+        <aside class="address-container">
+          <address>22 Isaac Street<br>
+              Clinton, Ontario <br>N0M 1L0<br>
+          </address>
+          <img src="styles/assets/logo.png" alt="Verbeek's Farm and Garden Centre">
+        </aside>
+      </div>
+    </div>
+  </footer>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- JavaScript -->
+<script src="script.js"></script> 
+<!-- Google Maps -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap">
+</script>
+
+</body>
+</html>

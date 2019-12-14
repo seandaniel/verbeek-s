@@ -1,0 +1,269 @@
+body {
+  font-family: $primary-font;
+  color: $primary-color;
+  background: $tertiary-color;
+}
+
+h1, h2, h4 {
+  margin: 0;
+}
+
+p {
+  font-family: $secondary-font;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 80px 0;
+  position: relative;
+}
+
+h3::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 0;
+  width: 25%;
+  height: 5px;
+  background-color: $secondary-color;
+}
+
+h3::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 0;
+  width: 25%;
+  height: 5px;
+  background-color: $secondary-color;
+}
+
+@media (min-width:670px) {
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:1200px) {
+  h3::before {
+    left: 10%;
+  }
+
+  h3::after {
+    right: 10%;
+  }
+}
+
+//iPhone 5, SE
+.wrapper {
+  width: 310px;
+  margin: 0 auto;
+}
+
+//Samsung Galaxy S9/S9+
+@media (min-width:360px) {
+  .wrapper {
+    width: 340px;
+  }
+}
+
+//iPhone 6, 7, 8, X
+@media (min-width:375px) {
+  .wrapper {
+    width: 355px;
+  }
+}
+
+//iPhone 6+, 7+, 8+
+@media (min-width:414px) {
+  .wrapper {
+    width: 394px;
+  }
+}
+
+@media (min-width:670px) {
+  .wrapper {
+    width: 650px;
+  }
+}
+
+//iPad
+@media (min-width:768px) {
+  .wrapper {
+    width: 748px;
+  }
+}
+
+@media (min-width:1200px) {
+  .wrapper {
+    width: 1180px;
+  }
+}
+
+.modal-contact-button {
+  @include border-boxshadow;
+  @include button-styles;
+  &:hover {
+    @include button-styles-hovered;
+  }
+}
+
+// Mobile modal nav
+.mobile-nav-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #fbfbfb;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23353535' fill-opacity='0.07'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.modal-exit {
+  text-align: right;
+  a i {
+    font-size: 2.5rem;
+    padding: 20px 10px 0 0;
+    transition: color .35s;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.modal-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 180px;
+  li {
+    margin-bottom: 30px;
+    a {
+      position: relative;
+    }
+  }
+}
+
+.mobile-nav-modal li a::after {
+  top: 35px;
+  @include hover-underline-styles;
+}
+
+.mobile-nav-modal li a:hover::after {
+  @include hover-underline-styles-hovered
+}
+
+.mobile-nav-modal img {
+  width: calc(400px / 2);
+  height: calc(189px / 2);
+  padding-left: 10px;
+  margin-top: 100px;
+}
+// End of mobile modal nav
+
+// Contact modal
+.contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  overflow: hidden;
+  form {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 310px;
+    margin-top: 100px;
+    padding: 0 40px 40px 40px;
+    background-color: $tertiary-color;
+    border-top: solid 10px $secondary-color;
+    @include border-boxshadow;
+  }
+}
+
+@media (min-width:670px) {
+  .contact-modal form {
+    width: 600px;
+  }
+}
+
+.contact-modal form .modal-exit a i {
+  padding: 0 0 0 0;
+  margin: 20px 0 40px 0;
+}
+
+form input,
+form textarea {
+  background-color: $tertiary-color;
+  font-family: $secondary-font;
+  color: $primary-color;
+  border: none;
+  border-bottom: 3px solid $primary-color;
+  margin: 8px 0;
+}
+
+form input {
+  width: 150px;
+}
+
+form input:nth-child(3) {
+  margin-top: 0;
+}
+
+form input:nth-child(9) {
+  width: 200px;
+}
+
+
+@media (min-width:670px) {
+  form input {
+    font-size: 1.25rem;
+    width: 200px;
+  }
+
+  form input:nth-child(9) {
+    width: 260px;
+  }
+
+  form textarea {
+    font-size: 1.25rem;
+  }
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  font-family: $primary-font;
+  margin-top: 20px;
+  border: none;
+  @include button-styles;
+  &:hover {
+    @include button-styles-hovered;
+  }
+}
+// End of contact modal

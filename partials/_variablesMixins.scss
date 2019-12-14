@@ -1,0 +1,47 @@
+//colors
+$primary-color: #353535;
+$secondary-color: #9fc32e;
+$tertiary-color: #fbfbfb;
+$quaternary-color: #f4f4f4;
+
+//fonts
+$primary-font: 'Bebas Neue', cursive;
+$secondary-font: 'Roboto Condensed', sans-serif;
+
+//mixins 
+
+@mixin hover-underline-styles {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0%;
+  opacity: 0;
+  height: 4px;
+  background: $secondary-color;
+  transition: opacity .35s, width .35s;
+}
+
+@mixin hover-underline-styles-hovered {
+  width: 100%;
+  opacity: 1;
+  left: 0;  
+}
+
+@mixin button-styles {
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  color: $tertiary-color;
+  background-color: $primary-color;
+  @include border-boxshadow;
+  transition: background-color .35s, color .35s;
+}
+
+@mixin button-styles-hovered {
+  background-color: $tertiary-color;
+  color: $primary-color;
+}
+
+@mixin border-boxshadow {
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
