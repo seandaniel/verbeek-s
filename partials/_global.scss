@@ -41,7 +41,7 @@ h3::before {
   position: absolute;
   top: calc(50% - 5px);
   left: 0;
-  width: 25%;
+  width: 20%;
   height: 5px;
   background-color: $secondary-color;
 }
@@ -51,7 +51,7 @@ h3::after {
   position: absolute;
   top: calc(50% - 5px);
   right: 0;
-  width: 25%;
+  width: 20%;
   height: 5px;
   background-color: $secondary-color;
 }
@@ -64,12 +64,40 @@ h3::after {
 
 @media (min-width:1200px) {
   h3::before {
-    left: 10%;
+    width: 30%;
   }
 
   h3::after {
-    right: 10%;
+    width: 30%;
   }
+}
+
+h4 {
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+h4::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 0;
+  width: 65%;
+  height: 5px;
+  background-color: $secondary-color;
+}
+
+@media (min-width: 670px) {
+  h4::after {
+    width: 85%;
+  }
+}
+
+h5 {
+  font-size: 1.5rem;
+  color: $secondary-color;
+  margin: 30px 0;
 }
 
 //iPhone 5, SE
@@ -267,3 +295,91 @@ button {
   }
 }
 // End of contact modal
+
+// Section 1 styles
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    margin: 0 0 80px 0;
+    max-width: 500px;
+    span {
+      font-size: 1.5rem;
+      font-family: $primary-font;
+    }
+  }
+}
+
+.section-1 img {
+  width: calc(781px / 2.5);
+  height: calc(507px / 2.5);
+  @include border-boxshadow;
+}
+
+@media (min-width:670px) {
+  .section-1 img {
+    width: calc(781px / 1.75);
+    height: calc(507px / 1.75);
+  }
+}
+
+@media (min-width:1200px) {
+  .section-1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    p {
+      margin: 0;
+    }
+  }
+}
+// End of section 1 styles
+
+// Information card styles
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  padding: 40px 20px;
+  width: 310px;
+  border-top: solid 10px $secondary-color;
+  background-color: $tertiary-color;
+  @include border-boxshadow;
+  img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+  }
+  .card-info-text {
+    text-align: center;
+  }
+}
+
+@media (min-width:670px) {
+  .card-info {
+    width: 400px;
+  }
+}
+
+@media (min-width:1200px) {
+  .card-info {
+    width: 650px;
+  }
+}
+
+.card-info-ul {
+  font-family: $secondary-font;
+  text-align: left;
+  list-style: inside disc;
+  li {
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+  }
+}
+
+.card-info-ul li:last-child {
+  margin-bottom: 0;
+}
+// End of information card styles
