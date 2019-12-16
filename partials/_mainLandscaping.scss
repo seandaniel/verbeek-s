@@ -1,9 +1,146 @@
-.section-1-landscaping {
-  padding-top: 100px;
+.main-landscaping {
+  padding-top: 98.7px;
+  .section-1 {
+    margin-bottom: 80px;
+  }
 }
 
 @media (min-width:1200px) {
- .section-1-landscaping {
-   padding-top: 130px;
+ .main-landscaping {
+   padding-top: 130.2px;
  }
+}
+
+.landscaping-category {
+  margin-bottom: 80px;
+  background-color: $quaternary-color;
+  padding: 80px 0;
+  .card-p-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      max-width: 500px;
+    }
+  }
+}
+
+.card-info-container .card-info {
+  h5 {
+    margin: 0 0 30px 0;
+  }
+}
+
+@media (min-width:768px) {
+  .landscaping-category .card-p-container {
+    flex-direction: row;
+    justify-content: space-between;
+    p {
+      width: 350px;
+    }
+    .card-info {
+      width: 350px;
+      margin-top: 0;
+    }
+  }
+} 
+
+@media (min-width:1200px) {
+  .landscaping-category .card-p-container {
+    justify-content: space-evenly;
+    p {
+      width: 500px;
+    }
+    .card-info {
+      //Same as section-1 img
+      width: 446.283px;
+      margin-top: 0;
+    }
+  }
+}
+
+.design-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  figure {
+    position: relative;
+    img {
+      width: 310px;
+      height: 350px;
+      object-fit: cover;
+      margin-bottom: 80px;
+      @include border-boxshadow;
+    }
+  }
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+  opacity: 0;
+  transition: opacity .35s;
+}
+
+figure:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+@media(min-width:670px) {
+  .design-gallery figure img {
+    width: 380px;
+  }
+}
+
+@media (min-width:768px) {
+  .design-gallery {
+    justify-content: space-between;    
+    .gallery-col-3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 748px;
+    }
+  }
+
+  .design-gallery figure img {
+    width: 350px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .design-gallery img {
+      width: 360px;
+      margin: 0;
+    }
+
+  .design-gallery .gallery-col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .design-gallery .gallery-col-3 {
+    flex-direction: column;
+    width: 360px;
+  }
+
+  .design-gallery .portrait {
+    height: 620px;
+  }
+
+  
+  .design-gallery .landscape {
+    // wrapper with - 3 image's width
+    margin-top: 40px;
+  }
+
+  .design-gallery .landscape-thirdChild {
+    margin: 0 0 40px 0;
+  }
+  
 }
