@@ -21,28 +21,42 @@ $(function() {
     }
   });
     
-  // Mobile nav modal, Contact modal
+  // Mobile nav modal, Contact modal, Img modal
 
   // Opens Mobile nav modal
-  $('.fa-align-right').on('click',() =>{
-    $('.mobile-nav-modal').fadeIn().css({"display": "block"});
+  $('.fa-align-right').on('click',(e) => {
+    e.preventDefault();
+    $('.mobile-nav-modal').fadeIn().css('display', 'block');
   });
  
   // Opens Contact modal
-  $('.modal-contact-button').on('click', function(){
+  $('.contact-modal-button').on('click', (e) => {
+    e.preventDefault();
     $('.contact-modal').fadeIn();
+    $('body').css('overflow', 'visible');
   });
 
-  // Exits each modal
-  $('.fa-times-circle').on('click',() => {
+  // Opens Image modal
+  $('.image-modal-button').on('click', function(e){
+    e.preventDefault();
+    const image = $(this).data('main');
+    $('.image-modal-container img').attr('src', image);
+    $('.image-modal').fadeIn().css({"display": "block"});
+  });
+
+  // Exits Mobile nav modal, Contact modal, Image modal
+  $('.fa-times-circle').on('click', (e) => {
+    e.preventDefault();
     $('.mobile-nav-modal').fadeOut();
     $('.contact-modal').fadeOut();
+    $('.image-modal').fadeOut();
+    $('body').css('overflow', 'visible');
   });
 
   // Exits Contact modal on form submit
   $('form').on('submit',(event) => {
     event.preventDefault()
     $('.contact-modal').fadeOut();
-  });
+  }); 
 
 });

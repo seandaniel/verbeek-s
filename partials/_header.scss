@@ -13,7 +13,7 @@
 
 .primary-nav {
   position: fixed;
-  z-index: 90;
+  z-index: 110;
   top: 0;
   left: 0;
   display: flex;
@@ -34,6 +34,9 @@
     &:hover {
       color: $secondary-color;
     }
+    &:active {
+      color: $quaternary-color;
+    }
   }
 }
 
@@ -46,6 +49,10 @@
   font-family: $secondary-font;
   li a {
     position: relative;
+    transition: color .35s;
+    &:active {
+      color: $secondary-color;
+    }
   }
 }
 
@@ -131,10 +138,13 @@
   &:hover {
     @include button-styles-hovered;
   }
+  &:active {
+    background-color: $secondary-color;
+  }
 }
 
 @media (min-width:670px) {
-  .header-container div:nth-child(2) .modal-contact-button {
+  .header-container div:nth-child(2) .contact-modal-button {
     font-size: 2rem;
   }
 

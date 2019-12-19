@@ -41,7 +41,7 @@ h3::before {
   position: absolute;
   top: calc(50% - 5px);
   left: 0;
-  width: 20%;
+  width: 15%;
   height: 5px;
   background-color: $secondary-color;
 }
@@ -51,7 +51,7 @@ h3::after {
   position: absolute;
   top: calc(50% - 5px);
   right: 0;
-  width: 20%;
+  width: 15%;
   height: 5px;
   background-color: $secondary-color;
 }
@@ -59,6 +59,14 @@ h3::after {
 @media (min-width:670px) {
   h3 {
     font-size: 3rem;
+  }
+
+  h3::before {
+    width: 25%;
+  }
+
+  h3::after {
+    width: 25%;
   }
 }
 
@@ -83,21 +91,47 @@ h4::after {
   position: absolute;
   top: calc(50% - 5px);
   right: 0;
-  width: 65%;
+  width: 50%;
   height: 5px;
   background-color: $secondary-color;
 }
 
 @media (min-width: 670px) {
   h4::after {
-    width: 85%;
+    width: 80%;
   }
 }
 
 h5 {
   font-size: 1.5rem;
   color: $secondary-color;
-  margin: 30px 0;
+  margin: 0 0 30px 0;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  font-family: $primary-font;
+  margin-top: 20px;
+  border: none;
+  @include button-styles;
+  &:hover {
+    @include button-styles-hovered;
+  }
+  &:active {
+    background-color: $secondary-color;
+  }
+}
+
+.button {
+  @include border-boxshadow;
+  @include button-styles;
+  &:hover {
+    @include button-styles-hovered;
+  }
+  &:active {
+    background-color: $secondary-color;
+  }
 }
 
 //iPhone 5, SE
@@ -146,35 +180,15 @@ h5 {
   }
 }
 
-.modal-contact-button {
-  @include border-boxshadow;
-  @include button-styles;
-  &:hover {
-    @include button-styles-hovered;
-  }
-}
-
 // Mobile modal nav
 .mobile-nav-modal {
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: 120;
   width: 100%;
   height: 100%;
   background-color: #fbfbfb;
   background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23353535' fill-opacity='0.07'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-.modal-exit {
-  text-align: right;
-  a i {
-    font-size: 2.5rem;
-    padding: 20px 10px 0 0;
-    transition: color .35s;
-    &:hover {
-      color: $secondary-color;
-    }
-  }
 }
 
 .modal-ul {
@@ -188,6 +202,10 @@ h5 {
     margin-bottom: 30px;
     a {
       position: relative;
+      transition: .35s color;
+      &:active {
+        color: $secondary-color;
+      }
     }
   }
 }
@@ -213,11 +231,10 @@ h5 {
 .contact-modal {
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: 120;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3); 
-  overflow: hidden;
   form {
     display: flex;
     flex-direction: column;
@@ -239,6 +256,12 @@ h5 {
     width: 600px;
   }
 }
+
+// @media (min-height:900px) {
+//   .contact-modal form {
+//     top: 30%;
+//   }
+// }
 
 .contact-modal form .modal-exit a i {
   padding: 0 0 0 0;
@@ -280,40 +303,62 @@ form input:nth-child(9) {
 
   form textarea {
     font-size: 1.25rem;
+    margin-bottom: 0;
   }
 }
 
-button {
-  display: inline-block;
-  cursor: pointer;
-  font-family: $primary-font;
-  margin-top: 20px;
-  border: none;
-  @include button-styles;
-  &:hover {
-    @include button-styles-hovered;
-  }
+.contact-modal-button:active {
+  background-color: $secondary-color;
 }
 // End of contact modal
+
+// Modal exit
+.modal-exit {
+  text-align: right;
+  a i {
+    font-size: 2.5rem;
+    padding: 20px 10px 0 0;
+    transition: color .35s;
+    &:hover {
+      color: $secondary-color;
+    }
+    &:active {
+      color: $quaternary-color;
+    }
+  }
+}
+// End of modal exit
+
+// Main category styles
+.main-category {
+  padding-top: 98.7px;
+}
+
+@media (min-width:1200px) {
+ .main-category {
+   padding-top: 130.2px;
+ }
+}
+//End of main category styles
 
 // Section 1 styles
 .section-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 0 80px 0;
   p {
     margin: 0 0 80px 0;
     max-width: 500px;
     span {
-      font-size: 1.5rem;
+      font-size: 1.5rem; 
       font-family: $primary-font;
     }
   }
 }
 
 .section-1 img {
-  width: calc(781px / 2.5);
-  height: calc(507px / 2.5);
+  width: 100%;
   @include border-boxshadow;
 }
 
@@ -329,12 +374,54 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom: 80px;
     p {
       margin: 0;
     }
   }
 }
 // End of section 1 styles
+
+// Category styles
+.category {
+  margin-bottom: 80px;
+  background-color: $quaternary-color;
+  padding: 80px 0;
+  .card-p-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width:670px) {
+  .category .card-p-container p {
+    width: 500px;
+  }
+}
+
+@media (min-width:768px) {
+  .category .card-p-container {
+    flex-direction: row;
+    justify-content: space-between;
+    p {
+      width: 350px;
+    }
+  }
+}
+
+@media (min-width:1200px) {
+  .category .card-p-container {
+    justify-content: space-evenly;
+    p {
+      width: 500px;
+    }
+  }
+}
+//End of category styles
 
 // Information card styles
 .card-info {
@@ -343,7 +430,7 @@ button {
   align-items: center;
   margin-top: 80px;
   padding: 40px 20px;
-  width: 310px;
+  width: 100%;
   border-top: solid 10px $secondary-color;
   background-color: $tertiary-color;
   @include border-boxshadow;
@@ -383,3 +470,164 @@ button {
   margin-bottom: 0;
 }
 // End of information card styles
+
+// Card icon styles
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  .card-icon {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 370px;
+    padding: 40px 20px;
+    margin-bottom: 80px;
+    @include border-boxshadow;
+    border-top: solid 10px $secondary-color;
+  }
+}
+
+.card-icon .button {
+  margin: 30px 0 0 0;
+}
+
+@media (min-width:768px) {
+  .card-container {
+    justify-content: space-between;
+  }
+
+  .card-container .card-icon:last-child {
+    margin: 0 auto 80px auto;
+  }
+}
+
+@media (min-width:1200px) {
+  .card-container .card-icon {
+    border-radius: 0;
+    box-shadow: none;
+    border-top: solid 10px $tertiary-color;
+    transition: border-top .35s, border-radius .35s, box-shadow .35s;
+    &:hover {
+      @include border-boxshadow;
+      border-top: solid 10px $secondary-color;
+    }
+  }
+
+  .card-container .card-icon:last-child {
+    margin: 0 0 80px 0;
+  }
+}
+
+.card-icon .img-underlay {
+  background-color: $quaternary-color;
+  padding: 30px;
+  border-radius: 50%;
+  img {
+    height: 90px;
+    width: 90px;
+    border-radius: 0;
+  }
+}
+
+.card-icon h2 {
+  font-size: 1.5rem;
+  color: $secondary-color;
+  margin: 30px 0;
+}
+//End of card icon styles
+
+//Card container duo styles
+.wrapper .card-container-duo {
+  margin-top: 0;
+}
+
+@media (min-width:768px) {
+  .wrapper .card-container-duo {
+    margin-top: 80px
+  }
+
+  .wrapper .card-container-duo .card-icon:last-child {
+    margin: 0 0 80px 0;
+  }
+}
+
+@media (min-width:1200px) {
+  .wrapper .card-container-duo {
+    justify-content: space-evenly;
+  }
+}
+//End of card duo styles
+
+//Quad gallery styles
+.quadGallery figure {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  margin-bottom: 80px;
+}
+
+.quadGallery img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  @include border-boxshadow;
+}
+
+.quadGallery figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: rgba(255,255,255,0.5);
+  padding: 20px 0;
+  width: 100%;
+  p {
+    font-family: $primary-font;
+    font-size: 2rem;
+  }
+}
+
+@media(min-width:670px) {
+  .quadGallery figure,
+  .quadGallery figure img { 
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (min-width:768px) {
+  .quadGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    figure {
+      width: 320px;
+      height: 320px;
+      margin-bottom: 40px;
+      img {
+        width: 320px;
+        height: 320px;
+      }
+    }   
+  }
+}
+
+@media (min-width:1200px) {
+  .quadGallery {
+    justify-content: space-between;
+    width: 675px; 
+  }
+
+  .quadGallery figure:nth-child(3),
+  .quadGallery figure:last-child {
+    margin-bottom: 0;
+  }
+}
+//end of quad gallery styles
