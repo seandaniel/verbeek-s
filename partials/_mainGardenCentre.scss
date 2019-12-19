@@ -1,9 +1,59 @@
-.main-gardenCentre {
-  padding-top: 98.7px;
+.category .card-p-container .p-Width {
+  width: 100%;
+}
+
+@media (min-width:670px) {
+  .category .card-p-container .p-Width {
+    width: 500px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width:1200px) {
- .main-gardenCentre {
-   padding-top: 130.2px;
- }
+  .category .card-p-container .p-Width {
+    width: 800px;
+  }
+}
+
+.gallery-card-container,
+.gallery-card-container-reverse {
+  margin-bottom: 80px;
+}
+
+.gallery-card-container .card-info,
+.gallery-card-container-reverse .card-info {
+  margin-top: 0;
+}
+
+.gallery-card-container .card-info h5,
+.gallery-card-container-reverse .card-info h5 {
+  text-align: center;
+}
+
+@media(min-width:670px) {
+  .gallery-card-container,
+  .gallery-card-container-reverse {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width:1200px) {
+  .gallery-card-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .gallery-card-container-reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .gallery-card-container .card-info,
+  .gallery-card-container-reverse .card-info {
+    width: 450px;
+    margin-top: 0;
+  }
 }
