@@ -29,6 +29,7 @@
 .image-modal-container img {
   width: 500px;
   height: 500px;
+  object-fit: cover;
   @include border-boxshadow;
 }
 
@@ -90,7 +91,6 @@ figcaption {
 
 @media (min-width:670px) {
   .gallery-item-overlay {
-    cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
@@ -102,8 +102,9 @@ figcaption {
     align-items: center;
     background: rgba(255,255,255,0.5);
     opacity: 1;
-    p {
+    h5 {
       font-size: 2rem;
+      color: $primary-color;
       margin-bottom: 30px;
     }
   }
@@ -175,7 +176,7 @@ figcaption {
   }
   
   .design-gallery .figure-landscape {
-    // wrapper width - 3 image's width / 2
+    //wrapper width - 3 image's width / 2
     margin: 65px 0 0 0;
   }
 
