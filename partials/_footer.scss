@@ -64,12 +64,32 @@ footer {
   margin: 10px 0;
 }
 
-.hours-container .contact-modal-button {
-  display: inline-block;
+.hours-container .message-us-container {
+  display: flex;
+  justify-content: center;
+  .contact-modal-button {
+    display: inline-block;
+    margin-right: 10px;
+  }
 }
 
-.hours-container .message-us-container {
-  text-align: center;
+.hours-container .message-us-container a i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  padding: 5px 10px;
+  height: 37.6px;
+  color: $tertiary-color;
+  background-color: #395693;
+  transition: background-color .35s;
+  @include border-boxshadow;
+  &:hover {
+    @include button-styles-hovered;
+  }
+  &:active {
+    background-color: $secondary-color;
+  }
 }
 
 .address-container {
@@ -88,6 +108,11 @@ footer {
   }
 }
 
+.address-container .copyright {
+  margin-top: 10px;
+  font-style: italic;
+}
+
 @media (min-width:670px) {
   .hours-container {
     margin-right: 50px;
@@ -104,6 +129,6 @@ footer {
   }
 
   .address-container {
-    margin-left: 0;
+    margin: 0;
   }
 }
