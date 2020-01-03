@@ -1,10 +1,10 @@
-.home-header {
+.header-index {
   background-image:    
     linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("assets/headerBackground1.JPG");
+    url("assets/landscaping/retainingWall.JPG");
   background-size: cover;
   height: 870px;
   width: 100%;
@@ -27,6 +27,7 @@
     width: calc(400px / 2);
     height: calc(189px / 2);
     transition: width .35s, height .35s;
+    display: block;
   }
   i {
     font-size: 2rem;
@@ -34,11 +35,9 @@
     &:hover {
       color: $secondary-color;
     }
-    &:active {
-      color: $quaternary-color;
-    }
   }
 }
+
 
 .desktop-ul {
   display: none;
@@ -46,7 +45,9 @@
   align-items: center;
   width: 330px;
   text-transform: uppercase;
-  font-family: $secondary-font;
+  font-family: $primary-font;
+  font-size: 1.5rem;
+  letter-spacing: .01rem;
   li a {
     position: relative;
     transition: color .35s;
@@ -57,7 +58,7 @@
 }
 
 .desktop-ul li a::after {
-  top: 20px;
+  top: 28px;
   @include hover-underline-styles;
 }
 
@@ -99,7 +100,6 @@
     font-size: 3rem;
     text-transform: uppercase;
     width: 270px;
-    margin-bottom: 10px;
     text-shadow: 0 0 5px rgba(0,0,0,0.3);
   }
 }
@@ -118,10 +118,6 @@
   .header-container {
     padding-left: 140px;
   }
-}
-
-.header-container div:nth-child(2) {
-  margin-bottom: 10px;
 }
 
 .header-container div:nth-child(2) a i {
