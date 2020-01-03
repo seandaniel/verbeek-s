@@ -13,9 +13,9 @@ $(function() {
     if ($(window).width() >= 1100) {
       $(window).scroll(function() {
         if ($(window).scrollTop() > 100) {
-          $(".primary-nav img").css({"height": "calc(189px / 2)", "width": "calc(400px / 2)"});
+          $(".primary-nav img").css({'height': 'calc(189px / 2)', 'width': 'calc(400px / 2)'});
         } else {
-          $('.primary-nav img').css({"height": "calc(189px / 1.5)", "width": "calc(400px / 1.5)"});
+          $('.primary-nav img').css({'height': 'calc(189px / 1.5)', 'width': 'calc(400px / 1.5)'});
           }
       });
     }
