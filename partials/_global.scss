@@ -112,21 +112,14 @@ h5 {
 }
 
 button {
-  display: inline-block;
   cursor: pointer;
-  font-family: $primary-font;
-  margin-top: 20px;
   border: none;
-  @include button-styles;
-  &:hover {
-    @include button-styles-hovered;
-  }
-  &:active {
-    background-color: $secondary-color;
-  }
+  background-color: inherit;
+  padding: 0;
 }
 
 .button {
+  font-family: $primary-font;
   @include border-boxshadow;
   @include button-styles;
   &:hover {
@@ -238,11 +231,15 @@ button {
   z-index: 120;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); 
+  background-color: rgba(0, 0, 0, 0.3);
+  .modal-exit .modal-exit-button {
+    margin: 20px 0 0 0;
+  } 
   form {
     display: flex;
     flex-direction: column;
     position: fixed;
+    font-size: 1.125rem;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -279,7 +276,7 @@ form textarea {
   color: $primary-color;
   border: none;
   border-bottom: 3px solid $primary-color;
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
 form input {
@@ -294,7 +291,6 @@ form input:nth-child(9) {
   width: 200px;
 }
 
-
 @media (min-width:670px) {
   form input {
     font-size: 1.25rem;
@@ -307,7 +303,6 @@ form input:nth-child(9) {
 
   form textarea {
     font-size: 1.25rem;
-    margin-bottom: 0;
   }
 }
 
@@ -319,9 +314,9 @@ form input:nth-child(9) {
 // Modal exit
 .modal-exit {
   text-align: right;
-  a i {
+  .modal-exit-button {
     font-size: 2.5rem;
-    padding: 20px 10px 0 0;
+    margin: 20px 10px 0 0;
     transition: color .35s;
     &:hover {
       color: $secondary-color;
@@ -359,6 +354,7 @@ form input:nth-child(9) {
 }
 
 .section-1 img {
+  height: 550px;
   width: 100%;
   object-fit: cover;
   @include border-boxshadow;
@@ -366,8 +362,8 @@ form input:nth-child(9) {
 
 @media (min-width:670px) {
   .section-1 img {
+    //width of info-card
     width: calc(781px / 1.75);
-    height: calc(507px / 1.75);
   }
 }
 
@@ -448,13 +444,14 @@ form input:nth-child(9) {
 
 @media (min-width:670px) {
   .card-info {
-    width: 400px;
+    width: 370px;
   }
 }
 
 @media (min-width:1200px) {
   .card-info {
-    width: 650px;
+    //section-1 img width
+    width: calc(781px / 1.75);
   }
 }
 
@@ -485,7 +482,7 @@ form input:nth-child(9) {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 370px;
+    width: 100%;
     padding: 40px 20px;
     margin-bottom: 80px;
     @include border-boxshadow;
@@ -495,6 +492,12 @@ form input:nth-child(9) {
 
 .card-icon .button {
   margin: 30px 0 0 0;
+}
+
+@media (min-width:670px) {
+  .card-container .card-icon {
+    width: 370px;
+  }
 }
 
 @media (min-width:768px) {
