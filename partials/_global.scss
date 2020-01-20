@@ -176,6 +176,29 @@ button {
   }
 }
 
+//home button 
+.modal-ul li a i:last-child,
+.desktop-ul li a i:last-child {
+  padding: 8px;
+  color: $secondary-color;
+  background-color: $primary-color;
+  transition: background-color .35s, color .35s;
+  @include border-boxshadow;
+  &:hover {
+    @include button-styles-hovered;
+  }
+  &:active {
+    background-color: $secondary-color;
+  }
+}
+
+.modal-ul li:last-child a::after,
+.desktop-ul li:last-child a::after {
+  background: none;
+}
+
+//end of home button styles
+
 // Mobile modal nav
 .mobile-nav-modal {
   display: none;
@@ -562,7 +585,10 @@ form input:nth-child(9) {
 
 @media (min-width:1200px) {
   .wrapper .card-container-duo {
-    justify-content: space-evenly;
+    // (((.wrapper - (cards * 3)) / 2) + (cards * 2)
+    width: 775px;
+    margin: 80px auto 0 auto;
+    justify-content: space-between;
   }
 }
 //End of card duo styles
