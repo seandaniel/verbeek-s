@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Verbeek's Farm and Garden Centre, located in Clinton, Ontario.">
+  <!-- Favicon -->
+  <link type="image/png" href="styles/assetsOptimized/favicon.ico" rel="icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed:300,400,400i,700&display=swap" rel="stylesheet">   
   <!-- Font Awesome -->
@@ -22,29 +24,31 @@
     <li><a href="landscaping.html">Landscaping</a></li>
     <li><a href="gardenCentre.html">Garden Centre</a></li>
     <li><a href="store.html">Store</a></li>
-    <li><a href="index.html" aria-label="home" title="Home"><i class="fas fa-home"></i></a></li>
+    <li><a href="/" aria-label="home" title="Home"><i class="fas fa-home"></i></a></li>
   </ul>
-  <img src="styles/assets/logo.png" alt="Verbeek's Farm and Garden Centre"> 
+  <img src="styles/assetsOptimized/logo.png" alt="Verbeek's Farm and Garden Centre"> 
 </nav>
 <!-- End of mobile nav -->
 
 <!-- Contact modal -->
 <div class="contact-modal">
-  <form action="#" method="POST">
+  <form action="http://www.focuspocus.io/magic/f80119ca32316605370bd27ddeded53d" method="POST">
     <aside class="modal-exit">
       <button class="modal-exit-button"><i class="fas fa-times-circle"></i></button>
     </aside>
     <label class="visuallyhidden" for="name">Name</label>
-    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" name="Name" placeholder="Name" required>
     <label class="visuallyhidden" for="email">Email</label>
-    <input type="email" id="email" placeholder="Email" required>
+    <input type="email" name="Email" placeholder="Email" required>
     <label class="visuallyhidden" for="number">Phone Number</label>
-    <input type="input" id="number" placeholder="Phone number" required>
+    <input type="input" name="Phone Number" placeholder="Phone number" required>
     <label class="visuallyhidden" for="subject">Subject</label>
-    <input type="subject" placeholder="Subject" required>
-    <label class="visuallyhidden" for="message">How can we help you?</label>
-    <textarea name="message" id="message" cols="20" rows="4" placeholder="How can we help you?" required></textarea>
+    <input type="subject" name="Subject" placeholder="Subject" required>
+    <label class="visuallyhidden" for="Message">How can we help you?</label>
+    <textarea name="Message" cols="20" rows="4" placeholder="How can we help you?" required></textarea>
     <button class="button" type="submit">We will be in touch!</button>
+    <p>or e-mail us:</p>
+    <a class="button" href="mailto:verbeeks@cabletv.on.ca">verbeeks@cabletv.on.ca</a>
   </form>
 </div>
 <!-- End of contact modal -->
@@ -53,13 +57,13 @@
   <header>
     <!-- Primary navigation  -->
     <nav class="primary-nav">
-      <h1><a href="index.html"><img src="styles/assets/logo.png" alt="Verbeek's Farm and Garden Centre" title="Home"></a></h1>
+      <h1><a href="/"><img src="styles/assetsOptimized/logo.png" alt="Verbeek's Farm and Garden Centre" title="Home"></a></h1>
       <button class="align-right-button"><i class="fas fa-align-right"></i></button>
       <ul class="desktop-ul">
         <li><a href="landscaping.html">Landscaping</a></li>
         <li><a href="gardenCentre.html">Garden Centre</a></li>
         <li><a href="store.html">Store</a></li>
-        <li><a href="index.html" aria-label="home" title="Home"><i class="fas fa-home"></i></a></li>
+        <li><a href="/" aria-label="home" title="Home"><i class="fas fa-home"></i></a></li>
       </ul>
     </nav>
     <!-- End of primary navigation  -->
@@ -70,7 +74,7 @@
       <!-- Section 1 -->
       <section class="section-1">
         <p><span>Looking for that unique tree? A new hosta? Maybe some soil?<br></span>We have a large variety of hand picked plants, unique trees, evergreens and flowering shrubs. Our garden centre experts will guide you in finding the right plant or tree and how to take care of it properly. Looking for some bulk items such as soil or mulch? We deliver!</p>
-        <img src="styles/assets/gardenCentre/gardenCentre.jpg" alt="A greenhouse filled with a variety of plants">
+        <img src="styles/assetsOptimized/gardenCentre/gardenCentre.jpeg" alt="A greenhouse filled with a variety of plants">
       </section>
       <!-- End of section 1 -->
     </div>
@@ -87,25 +91,25 @@
       <section class="gallery-card-container-reverse">
         <aside class="quadGallery">
           <figure>
-            <img src="styles/assets/gardenCentre/flowers/hosta.jpg" alt="A group of variegated hostas">
+            <img src="styles/assetsOptimized/gardenCentre/flowers/hosta.jpeg" alt="A group of variegated hostas">
             <figcaption>
               <h5>Hosta</h5>
             </figcaption>
           </figure>
           <figure>
-            <img src="styles/assets/gardenCentre/flowers/hydrangea.jpeg" alt="A single pink hydrangea">
+            <img src="styles/assetsOptimized/gardenCentre/flowers/hydrangea.jpeg" alt="A single pink hydrangea">
             <figcaption>
               <h5>Hydrangea</h5>
             </figcaption>
           </figure>
           <figure>
-            <img src="styles/assets/gardenCentre/flowers/trillium.webp" alt="A single white trillium">
+            <img src="styles/assetsOptimized/gardenCentre/flowers/trillium.jpeg" alt="A single white trillium">
             <figcaption>
               <h5>Trillium</h5>
             </figcaption>
           </figure>
           <figure>
-            <img src="styles/assets/gardenCentre/flowers/daylily.jpg" alt="A multi-shaded orange daylily">
+            <img src="styles/assetsOptimized/gardenCentre/flowers/daylily.jpeg" alt="A multi-shaded orange daylily">
             <figcaption>
               <h5>Daylily</h5>
             </figcaption>
@@ -137,25 +141,25 @@
       <section class="gallery-card-container">
         <aside class="quadGallery">
           <figure>
-            <img src="styles/assets/gardenCentre/trees/sugarMaple.jpg" alt="A tall orange sugar maple standing alone">
+            <img src="styles/assetsOptimized/gardenCentre/trees/sugarMaple.jpeg" alt="A tall orange sugar maple standing alone">
             <figcaption>
               <h5>Sugar Maple</h5>
             </figcaption>
           </figure>
           <figure>
-            <img src="styles/assets/gardenCentre/trees/appleTree.jpg" alt="Five apples on a branch in the sun">
+            <img src="styles/assetsOptimized/gardenCentre/trees/appleTree.jpeg" alt="Five apples on a branch in the sun">
             <figcaption>
               <h5>Apple</h5>
             </figcaption>
           </figure>
           <figure>
-            <img src="styles/assets/gardenCentre/trees/japMaple.jpg" alt="A close-up of a red leaved japanese maple">
+            <img src="styles/assetsOptimized/gardenCentre/trees/japMaple.jpeg" alt="A close-up of a red leaved japanese maple">
             <figcaption>
               <h5>Japanese Maple</h5>
             </figcaption>
           </figure>
           <figure>
-            <img src="styles/assets/gardenCentre/trees/evergreen.jpg" alt="Five evergreen trees standing tall beside eachother">
+            <img src="styles/assetsOptimized/gardenCentre/trees/evergreen.jpeg" alt="Five evergreen trees standing tall beside eachother">
             <figcaption>
               <h5>Evergreen</h5>
             </figcaption>
@@ -187,25 +191,25 @@
       <section class="gallery-card-container-reverse">
         <aside class="quadGallery">
           <figure>
-            <img src="styles/assets/gardenCentre/bulk/mulch.jpg" alt="A close-up of brown, natural mulch">
+            <img src="styles/assetsOptimized/gardenCentre/bulk/mulch.jpeg" alt="A close-up of brown, natural mulch">
             <figcaption>
               <h5>Mulch</h5>
             </figcaption>
           </figure>
           <figure>
-            <img src="styles/assets/gardenCentre/bulk/topSoil.jpg" alt="A hand holding brown top soil">
+            <img src="styles/assetsOptimized/gardenCentre/bulk/topSoil.jpeg" alt="A hand holding brown top soil">
             <figcaption>
               <h5>Top Soil</h5>
             </figcaption>
           </figure>
           <figure>
-            <img src="styles/assets/gardenCentre/bulk/riverRock.jpg" alt="A close up of several colourful rocks">
+            <img src="styles/assetsOptimized/gardenCentre/bulk/riverRock.jpeg" alt="A close up of several colourful rocks">
             <figcaption>
               <h5>River rock</h5>
             </figcaption>
           </figure>
           <figure>
-            <img src="styles/assets/gardenCentre/bulk/gravel.jpg" alt="A close up of small rocks that represent gravel">
+            <img src="styles/assetsOptimized/gardenCentre/bulk/gravel.jpeg" alt="A close up of small rocks that represent gravel">
             <figcaption>
               <h5>Gravel</h5>
             </figcaption>
@@ -229,7 +233,7 @@
       <section class="card-container card-container-duo">
         <div class="card-icon">
           <figure class="img-underlay">
-            <img src="styles/assets/icons/brick.png" alt="An evenly spaced brick wall">
+            <img src="styles/assetsOptimized/icons/brick.png" alt="An evenly spaced brick wall">
           </figure>
           <h2>Landscaping</h2>
           <p>The general rule of thumb is to put 10% of your house's value into landscaping. Mark and his team have the tools and knowledge to do it.</p>
@@ -237,7 +241,7 @@
         </div>
         <div class="card-icon">
           <figure class="img-underlay">
-            <img src="styles/assets/icons/store.png" alt="A storefront with barbeques, wheelbarrows and other landscaping supplies">
+            <img src="styles/assetsOptimized/icons/store.png" alt="A storefront with barbeques, wheelbarrows and other landscaping supplies">
           </figure>
           <h2>Our Store</h2>
           <p>Our store is home grown, and by that we mean a majority of our products come from our nation eh. Kelly is anticipating your arrival.</p>
@@ -255,10 +259,10 @@
         </aside class="map-container">
         <div class="hours-container">
           <h5>Hours</h5>
-          <p>Monday to Saturday: 8am - 5:30pm</p>
+          <p>Monday to Saturday: 8:30am - 5:30pm</p>
           <p>Sunday: <span>Closed</span></p>
           <p>Can't make it in? We would love to chat!</p>
-          <p>519-482-9333</p>
+          <a href="tel:519-482-9333"><i class="fas fa-phone"></i>519-482-9333</a>
           <p>or</p>
           <div class="message-us-container">
             <button class="button contact-modal-button">Message Us</button>
@@ -269,8 +273,8 @@
           <address>22 Isaac Street<br>
               Clinton, Ontario <br>N0M 1L0<br>
           </address>
-          <img src="styles/assets/logo.png" alt="Verbeek's Farm and Garden Centre">
-          <p class="copyright">© 2020 SdG</p>
+          <img src="styles/assetsOptimized/logo.png" alt="Verbeek's Farm and Garden Centre">
+          <p class="copyright">© 2020 Verbeek's F&GC</p>
         </aside>
       </div>
     </div>

@@ -10,7 +10,8 @@ h1, h2, h4 {
 
 p {
   font-family: $secondary-font;
-  line-height: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
   margin: 0;
 }
 
@@ -272,7 +273,16 @@ button {
     background-color: $tertiary-color;
     border-top: solid 10px $secondary-color;
     @include border-boxshadow;
+    p {
+      font-size: 1.25rem;
+      margin: 10px 0;
+      text-align: center;
+    }
   }
+}
+
+.contact-modal a {
+  text-align: center;
 }
 
 @media (min-width:670px) {
@@ -300,6 +310,7 @@ form textarea {
   border: none;
   border-bottom: 3px solid $primary-color;
   margin: 10px 0;
+  resize: vertical;
 }
 
 form input {
@@ -455,11 +466,6 @@ form input:nth-child(9) {
   border-top: solid 10px $secondary-color;
   background-color: $tertiary-color;
   @include border-boxshadow;
-  img {
-    height: 130px;
-    width: 130px;
-    border-radius: 50%;
-  }
   .card-info-text {
     text-align: center;
   }
@@ -484,6 +490,7 @@ form input:nth-child(9) {
   list-style: inside disc;
   li {
     margin-bottom: 20px;
+    font-size: 1.1rem;
     line-height: 1.5rem;
   }
 }

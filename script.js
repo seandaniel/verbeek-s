@@ -7,19 +7,26 @@ function initMap() {
 };
 
 $(function() {
-  
-  // Logo on scroll
-  $(window).on('resize', function() {
-    if ($(window).width() >= 1100) {
-      $(window).scroll(function() {
-        if ($(window).scrollTop() > 100) {
-          $(".primary-nav img").css({'height': 'calc(189px / 2)', 'width': 'calc(400px / 2)'});
-        } else {
-          $('.primary-nav img').css({'height': 'calc(189px / 1.5)', 'width': 'calc(400px / 1.5)'});
-          }
-      });
+
+  //Logo on scroll
+  let mq1200 = window.matchMedia("(min-width: 1200px)");
+
+  $(window).on('resize', () => {
+    mq1200 = window.matchMedia("(min-width: 1200px)");
+  });
+
+  $(window).on('scroll', () => {
+    if (mq1200.matches) {
+      if ($(window).scrollTop() > 100) {
+        $(".primary-nav img").css({'height': 'calc(189px / 2)', 'width': 'calc(400px / 2)'});
+      } else {
+        $('.primary-nav img').css({'height': 'calc(189px / 1.5)', 'width': 'calc(400px / 1.5)'});
+      }
+    } else {
+      $(".primary-nav img").css({'height': 'calc(189px / 2)', 'width': 'calc(400px / 2)'});
     }
   });
+
     
   // Mobile nav modal, Contact modal, Img modal
 
@@ -53,10 +60,10 @@ $(function() {
     $('body').css('overflow', 'visible');
   });
 
-  // Exits Contact modal on form submit
-  $('form').on('submit',(event) => {
-    event.preventDefault()
-    $('.contact-modal').fadeOut();
-  }); 
+  // // Exits Contact modal on form submit
+  // $('form').on('submit',(event) => {
+  //   event.preventDefault()
+  //   $('.contact-modal').fadeOut();
+  // }); 
 
 });

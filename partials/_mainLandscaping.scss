@@ -80,9 +80,21 @@
   }
 }
 
-//img with bug
-.gallery-col-2 {
+//why do I have to set a width on only this col?
+.gallery-col-1 {
   width: 100%;
+}
+
+@media (min-width:670px) {
+  .gallery-col-1 {
+    width: 370px;
+  }
+}
+
+@media (min-width:1200px) {
+  .gallery-col-1 {
+    width: 350px;
+  }
 }
 
 figcaption {
@@ -108,19 +120,8 @@ figcaption {
       margin-bottom: 30px;
     }
   }
-
-  //img width bug
-  .gallery-col-2 {
-    width: 370px;
-  }
 }
 
-@media (min-width:768px) {
-  //img width bug
-  .gallery-col-2 {
-    width: 350px;
-  }
-}
 
 @media (min-width:1200px) {
   .gallery-item-overlay {

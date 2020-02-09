@@ -52,11 +52,19 @@ footer {
   text-transform: uppercase;
 }
 
-.hours-container p:nth-child(5) {
+.hours-container a:nth-child(5) {
+  display: flex;
+  justify-content: center;
   font-size: 1.5rem;
   font-family: $primary-font;
   margin-top: 10px;
-  text-align: center;
+  transition: .35s;
+  &:hover {
+    color: $secondary-color;
+  }
+  i {
+    margin-right: 10px;
+  }
 }
 
 .hours-container p:nth-child(6) {

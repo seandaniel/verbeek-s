@@ -1,12 +1,12 @@
 .header-index {
   background-image:    
     linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
     ),
-    url("assets/landscaping/retainingWall.JPG");
+    url("assets/homeHeader.jpeg");
   background-size: cover;
-  height: 870px;
+  height: 925px;
   width: 100%;
   position: relative;
 }
@@ -90,6 +90,16 @@
       width: 550px;
     }
   }
+}
+
+.img-small {
+  width: calc(400px / 2);
+  height: calc(189px / 2);
+}
+
+.img-large {
+  width: calc(400px / 1.5);
+  height: calc(189px / 1.5);
 }
 
 .header-container {
