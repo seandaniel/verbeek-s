@@ -218,7 +218,7 @@ button {
   font-size: 2rem;
   letter-spacing: .01rem;
   text-align: center;
-  margin-top: 180px;
+  margin-top: 140px;
   li {
     margin-bottom: 30px;
     a {
@@ -309,8 +309,11 @@ form textarea {
   color: $primary-color;
   border: none;
   border-bottom: 3px solid $primary-color;
+  border-radius: 2px;
+  background-color: rgba(159, 194, 46, 0.1);
   margin: 10px 0;
   resize: vertical;
+  padding: 5px 0;
 }
 
 form input {
@@ -397,7 +400,7 @@ form input:nth-child(9) {
 @media (min-width:670px) {
   .section-1 img {
     //width of info-card
-    width: calc(781px / 1.75);
+    width: 550px;
   }
 }
 
@@ -473,7 +476,7 @@ form input:nth-child(9) {
 
 @media (min-width:670px) {
   .card-info {
-    width: 370px;
+    width: 394px;
   }
 }
 

@@ -40,7 +40,7 @@ $(function() {
   $('.contact-modal-button').on('click', (e) => {
     e.preventDefault();
     $('.contact-modal').fadeIn();
-    $('body').css('overflow', 'visible');
+    $('body').css('overflow', 'hidden');
   });
 
   // Opens Image modal
