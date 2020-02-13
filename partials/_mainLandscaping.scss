@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     position: fixed;
+    // Why does 50% look not centered in desktop --especially mobile?
     top: 40%;
     left: 50%;
     z-index: 120;
@@ -53,12 +54,14 @@
 @media (min-width:768px) {
   .category .card-p-container .card-info {
     margin-top: 0;
+    width: 350px;
   }
 } 
 
 @media (min-width:1200px) {
   .category .card-p-container .card-info {
     margin-top: 0;
+    width: 446.283px;
   }
 }
 
@@ -80,64 +83,10 @@
   }
 }
 
-//why do I have to set a width on only this col?
-.gallery-col-1 {
-  width: 100%;
-}
-
-@media (min-width:670px) {
-  .gallery-col-1 {
-    width: 370px;
-  }
-}
-
-@media (min-width:1200px) {
-  .gallery-col-1 {
-    width: 350px;
-  }
-}
-
-figcaption {
-  display: none;
-}
-
-@media (min-width:670px) {
-  .gallery-item-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255,255,255,0.5);
-    opacity: 1;
-    h5 {
-      font-size: 2rem;
-      color: $primary-color;
-      margin-bottom: 30px;
-    }
-  }
-}
-
-
-@media (min-width:1200px) {
-  .gallery-item-overlay {
-    opacity: 0;
-    transition: opacity .35s;
-  }
-
-  figure:hover .gallery-item-overlay {
-    opacity: 1;
-  }
-}
-
 @media(min-width:670px) {
   .design-gallery figure,
   .design-gallery figure img { 
-    width: 370px;
+    width: 394px;
   }
 }
 
@@ -195,6 +144,60 @@ figcaption {
 
   .gallery-col-2 figure:first-child {
     margin: 0 0 65px 0;
+  }
+}
+
+//why do I have to set a width on only this col?
+.gallery-col-1 {
+  width: 100%;
+}
+
+@media (min-width:670px) {
+  .gallery-col-1 {
+    width: 394px;
+  }
+}
+
+@media (min-width:1200px) {
+  .gallery-col-1 {
+    width: 350px;
+  }
+}
+
+.gallery-item-overlay {
+  display: none;
+}
+
+@media (min-width:670px) {
+  .gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.5);
+    opacity: 1;
+    h5 {
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+@media (min-width:1200px) {
+  .gallery-item-overlay {
+    opacity: 0;
+    transition: opacity .35s;
+  }
+
+  figure:hover .gallery-item-overlay {
+    opacity: 1;
   }
 }
 

@@ -1,31 +1,37 @@
-//Section 1
-.owner-fb-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .card-info img {
+//Section 2
+.section-2 {
+  background-color: $quaternary-color;
+  padding: 80px 0;
+  .owner-fb-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.section-2 .card-info {
+  margin: 0;
+  img {
     height: 250px;
     width: 250px;
     object-fit: cover;
     @include border-boxshadow;
     border-radius: 50%;
   }
-  .card-info h5 {
+  h5 {
     margin: 30px 0;
   }
 }
 
-@media (min-width:768px) {
-  .owner-fb-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 748px;
+@media (min-width:670px) {
+  .section-2 .card-info {
+    width: 550px;
   }
 }
 
 @media (min-width:1200px) {
-  .owner-fb-container {
+  .section-2 .owner-fb-container {
+    flex-direction: row;
     justify-content: space-evenly;
     width: 1180px;
     .card-info {
@@ -38,4 +44,10 @@
   margin-top: 80px;
   @include border-boxshadow;
 }
-// End of section 1
+
+@media (min-width:1200px) {
+  .fb-page{
+    margin-top: 0;
+  }
+}
+// End of section 2
