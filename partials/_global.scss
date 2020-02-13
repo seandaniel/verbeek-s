@@ -264,7 +264,8 @@ button {
     flex-direction: column;
     position: fixed;
     font-size: 1.125rem;
-    top: 40%;
+    // Why does 50% look not centered in mobile?
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 310px;
