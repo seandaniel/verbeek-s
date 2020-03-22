@@ -10,12 +10,9 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    // Why does 50% look not centered in desktop --especially mobile?
-    top: 40%;
+    top: 50%;
     left: 50%;
-    z-index: 120;
     transform: translate(-50%, -50%);
-    margin-top: 100px;
     padding: 0 40px 40px 40px;
     background-color: $tertiary-color;
     border-top: solid 10px $secondary-color;
@@ -31,12 +28,6 @@
   height: 500px;
   object-fit: cover;
   @include border-boxshadow;
-}
-
-@media (min-height:900px) {
-  .image-modal .image-modal-container {
-    top: 30%;
-  }
 }
 
 @media (min-width:1200px) {

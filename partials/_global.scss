@@ -264,12 +264,10 @@ button {
     flex-direction: column;
     position: fixed;
     font-size: 1.125rem;
-    // Why does 50% look not centered in desktop --especially mobile?
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 310px;
-    margin-top: 100px;
     padding: 0 40px 40px 40px;
     background-color: $tertiary-color;
     border-top: solid 10px $secondary-color;
@@ -291,12 +289,6 @@ button {
     width: 600px;
   }
 }
-
-// @media (min-height:900px) {
-//   .contact-modal form {
-//     top: 30%;
-//   }
-// }
 
 .contact-modal form .modal-exit a i {
   padding: 0 0 0 0;

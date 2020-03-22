@@ -56,7 +56,6 @@ $(function() {
     $('.mobile-nav-modal').fadeOut();
     $('.contact-modal').fadeOut();
     $('.image-modal').fadeOut();
-    $('body').css('overflow', 'visible');
   });
 
   // // Exits Contact modal on form submit
