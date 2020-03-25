@@ -31,9 +31,10 @@
   }
   .align-right-button {
     font-size: 2rem;
-    transition: color .35s;
+    transition: color 1s;
     &:hover {
       color: $secondary-color;
+      transition: .35s;
     }
   }
 }
@@ -147,10 +148,11 @@
     padding: 5px 10px;
     height: 37.6px;
     background-color: #395693;
-    transition: background-color .35s;
+    transition: background-color 1s, color 1s;
     @include border-boxshadow;
     &:hover {
       @include button-styles-hovered;
+      transition: .35s;
     }
     &:active {
       background-color: $secondary-color;

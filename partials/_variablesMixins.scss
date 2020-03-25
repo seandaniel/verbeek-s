@@ -33,13 +33,14 @@ $secondary-font: 'Roboto Condensed', sans-serif;
   padding: 5px 10px;
   color: $tertiary-color;
   background-color: $primary-color;
-  transition: background-color .35s, color .35s;
+  transition: background-color 1s, color 1s;
   @include border-boxshadow;
 }
 
 @mixin button-styles-hovered {
   background-color: $tertiary-color;
   color: $primary-color;
+  transition: .35s;
 }
 
 @mixin border-boxshadow {

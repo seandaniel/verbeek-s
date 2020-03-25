@@ -93,10 +93,11 @@ footer {
   height: 37.6px;
   color: $tertiary-color;
   background-color: #395693;
-  transition: background-color .35s;
+  transition: background-color 1s, color 1s;
   @include border-boxshadow;
   &:hover {
     @include button-styles-hovered;
+    transition: .35s;
   }
   &:active {
     background-color: $secondary-color;

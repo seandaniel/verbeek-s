@@ -183,10 +183,11 @@ button {
   padding: 8px;
   color: $secondary-color;
   background-color: $primary-color;
-  transition: background-color .35s, color .35s;
+  transition: background-color 1s, color 1s;
   @include border-boxshadow;
   &:hover {
     @include button-styles-hovered;
+    transition: .35s;
   }
   &:active {
     background-color: $secondary-color;
@@ -347,9 +348,10 @@ form input:nth-child(9) {
   .modal-exit-button {
     font-size: 2.5rem;
     margin: 20px 10px 0 0;
-    transition: color .35s;
+    transition: color 1s;
     &:hover {
       color: $secondary-color;
+      transition: .35s;
     }
   }
 }
@@ -542,10 +544,11 @@ form input:nth-child(9) {
     border-radius: 0;
     box-shadow: none;
     border-top: solid 10px $tertiary-color;
-    transition: border-top .35s, border-radius .35s, box-shadow .35s;
+    transition: border-top 1s, border-radius 1s, box-shadow 1s;
     &:hover {
       @include border-boxshadow;
       border-top: solid 10px $secondary-color;
+      transition: .35s;
     }
   }
 
