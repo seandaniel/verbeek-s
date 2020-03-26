@@ -60,9 +60,10 @@ footer {
     font-size: 1.5rem;
     font-family: $primary-font;
     margin: 10px auto 0 auto;
-    transition: color .35s;
+    transition: color 1s;
     &:hover {
       color: $secondary-color;
+      transition: .35s;
     }
     i {
       margin-right: 10px;

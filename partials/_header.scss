@@ -31,9 +31,10 @@
   }
   .align-right-button {
     font-size: 2rem;
-    transition: color .35s;
+    transition: color 1s;
     &:hover {
       color: $secondary-color;
+      transition: .35s;
     }
   }
 }
@@ -60,10 +61,12 @@
 .desktop-ul li a::after {
   top: 28px;
   @include hover-underline-styles;
+  transition: opacity 1s, left 1s, width 1s;
 }
 
 .desktop-ul li a:hover::after {
   @include hover-underline-styles-hovered;
+  transition: .35s;
 }
 
 @media (min-width:768px) {
