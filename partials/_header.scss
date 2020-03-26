@@ -31,10 +31,9 @@
   }
   .align-right-button {
     font-size: 2rem;
-    transition: color 1s;
+    transition: color .35s;
     &:hover {
       color: $secondary-color;
-      transition: .35s;
     }
   }
 }
