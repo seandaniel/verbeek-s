@@ -81,7 +81,12 @@ footer {
   justify-content: center;
   .contact-modal-button {
     display: inline-block;
+    color: $secondary-color;
     margin-right: 10px;
+    transition: color .35s, background-color .35s;
+    &:hover {
+      color: $primary-color;
+    }
   }
 }
 
