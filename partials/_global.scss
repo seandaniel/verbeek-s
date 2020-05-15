@@ -129,6 +129,9 @@ button {
   &:active {
     background-color: $secondary-color;
   }
+  &:focus {
+    @include button-styles-hovered;
+  }
 }
 
 //iPhone 5, SE
@@ -557,6 +560,14 @@ form input:nth-child(9) {
   .card-container .card-icon:last-child {
     margin: 0 0 80px 0;
   }
+
+  .card-icon a:focus .card-icon {
+      @include border-boxshadow;
+      border-top: solid 10px $secondary-color;
+      transition: .35s;
+      color: pink;
+  }
+
 }
 
 .card-icon .img-underlay {

@@ -36,9 +36,12 @@
       color: $secondary-color;
       transition: .35s;
     }
+    &:focus {
+      color: $secondary-color;
+      transition: .35s;
+    }
   }
 }
-
 
 .desktop-ul {
   display: none;
@@ -65,6 +68,11 @@
 }
 
 .desktop-ul li a:hover::after {
+  @include hover-underline-styles-hovered;
+  transition: .35s;
+}
+
+.desktop-ul li a:focus::after {
   @include hover-underline-styles-hovered;
   transition: .35s;
 }
@@ -160,6 +168,11 @@
       background-color: $secondary-color;
     }
   }
+}
+
+.header-container div:nth-child(2) a:focus i {
+  @include button-styles-hovered;
+  transition: .35s;
 }
 
 @media (min-width:670px) {

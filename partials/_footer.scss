@@ -65,6 +65,10 @@ footer {
       color: $secondary-color;
       transition: .35s;
     }
+    &:focus {
+      color: $secondary-color;
+      transition: .35s;
+    }
     i {
       margin-right: 10px;
     }
@@ -102,13 +106,23 @@ footer {
   transition: background-color 1s, color 1s;
   @include border-boxshadow;
   &:hover {
-    @include button-styles-hovered;
+    @include button-styles-hovered;             
     transition: .35s;
   }
   &:active {
     background-color: $secondary-color;
   }
+  &:focus {
+    @include button-styles-hovered;             
+    transition: .35s;
+  }
 }
+
+.hours-container .message-us-container a:focus i {
+  @include button-styles-hovered;
+  transition: .35s;
+}
+
 
 .address-container {
   display: flex;

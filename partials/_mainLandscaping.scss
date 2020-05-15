@@ -184,12 +184,20 @@
 @media (min-width:1200px) {
   .gallery-item-overlay {
     opacity: 0;
+    transition: opacity 1s;
+  }
+
+  figure:hover .gallery-item-overlay,
+  figure:focus .gallery-item-overlay {
+    opacity: 1;
     transition: opacity .35s;
   }
 
-  figure:hover .gallery-item-overlay {
-    opacity: 1;
-  }
+  // not working properly
+  // figure:focus-within figcaption button {
+  //   @include button-styles-hovered;             
+  //   transition: .35s;
+  // }
 }
 
 .gardens-gallery {
