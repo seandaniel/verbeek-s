@@ -56,6 +56,13 @@ $(function() {
     $('.mobile-nav-modal').fadeOut();
     $('.contact-modal').fadeOut();
     $('.image-modal').fadeOut();
+  }); 
+  
+  // Image modal when clicked outside of it
+  $('.image-modal').on('click', (e) => {
+    e.preventDefault();
+    // $('.contact-modal').fadeOut();
+    $('.image-modal').fadeOut();
   });
 
   // // Exits Contact modal on form submit
