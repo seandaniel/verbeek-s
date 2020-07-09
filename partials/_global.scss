@@ -123,15 +123,17 @@ button {
   font-family: $primary-font;
   @include border-boxshadow;
   @include button-styles;
-  &:hover {
+  &:hover,
+  &:focus {
     @include button-styles-hovered;
   }
   &:active {
     background-color: $secondary-color;
   }
-  &:focus {
-    @include button-styles-hovered;
-  }
+}
+
+.home:focus {
+  @include button-styles-hovered;
 }
 
 //iPhone 5, SE
@@ -188,7 +190,8 @@ button {
   background-color: $primary-color;
   transition: background-color 1s, color 1s;
   @include border-boxshadow;
-  &:hover {
+  &:hover,
+  &:focus {
     @include button-styles-hovered;
     transition: .35s;
   }
@@ -354,7 +357,8 @@ form input:nth-child(9) {
     font-size: 2.5rem;
     margin: 20px 10px 0 0;
     transition: color 1s;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $secondary-color;
       transition: .35s;
     }

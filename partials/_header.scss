@@ -32,10 +32,7 @@
   .align-right-button {
     font-size: 2rem;
     transition: color 1s;
-    &:hover {
-      color: $secondary-color;
-      transition: .35s;
-    }
+    &:hover,
     &:focus {
       color: $secondary-color;
       transition: .35s;
@@ -126,7 +123,8 @@
   }
   .button {
     color: $secondary-color;
-    &:hover {
+    &:hover
+    &:focus {
       color: $primary-color;
     }
   }

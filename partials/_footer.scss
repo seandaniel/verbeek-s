@@ -61,10 +61,7 @@ footer {
     font-family: $primary-font;
     margin: 10px auto 0 auto;
     transition: color 1s;
-    &:hover {
-      color: $secondary-color;
-      transition: .35s;
-    }
+    &:hover,
     &:focus {
       color: $secondary-color;
       transition: .35s;
@@ -88,7 +85,8 @@ footer {
     color: $secondary-color;
     margin-right: 10px;
     transition: color .35s, background-color .35s;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $primary-color;
     }
   }
@@ -105,16 +103,13 @@ footer {
   background-color: #395693;
   transition: background-color 1s, color 1s;
   @include border-boxshadow;
-  &:hover {
+  &:hover,
+  &:focus {
     @include button-styles-hovered;             
     transition: .35s;
   }
   &:active {
     background-color: $secondary-color;
-  }
-  &:focus {
-    @include button-styles-hovered;             
-    transition: .35s;
   }
 }
 
